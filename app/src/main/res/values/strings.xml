@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="nome">Nome do Contato</string>
+    <string name="telefone">Telefone Fixo</string>
+    <string name="celular">Telefone Celular</string>
+    <string name="salvar">Salvar</string>
+    <string name="tag">AGENDA</string>
+    <string name="data_file">dados_contatos</string>
+    <string name="table_contatos">contatos</string>
+    <string name="column_nome">nome</string>
+    <string name="column_telefone">telefone</string>
+    <string name="column_celular">celular</string>
+    <string name="sucesso">Salvo com sucesso!</string>
+    <string name="detalhe">Contato</string>
+    <string name="actnovo_button_save">Salvar</string>
+    <string name="actnovo_msg_save_sucess">Salvo com sucesso</string>
+    <string name="erro_dados_vazio">Todos os dados são obrigatórios.</string>
+    <string name="erro_contato">Contato inválido!</string>
+</resources>
