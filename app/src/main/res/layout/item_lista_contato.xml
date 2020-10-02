@@ -7,9 +7,9 @@
 
     <ImageView
         android:id="@+id/image_face"
-        android:layout_width="30dp"
+        android:layout_width="40dp"
         android:layout_height="30dp"
-        android:layout_marginStart="4dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         android:src="@drawable/avataricone2"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,12 +19,11 @@
         android:id="@+id/text_nome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        android:padding="10dp"
-        android:textColor="#040404"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/image_face"
-        app:layout_constraintTop_toBottomOf="@+id/image_face" />
+        app:layout_constraintTop_toTopOf="@+id/image_face" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
