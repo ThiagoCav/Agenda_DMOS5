@@ -36,6 +36,9 @@ public class ContatoDao {
     }
 
     public List<Contato> recuperateAll(){
+
+        String sql = "SELECT * FROM contato order by nome asc";
+
         List<Contato> contatos;
         Contato contato;
         Cursor cursor;
