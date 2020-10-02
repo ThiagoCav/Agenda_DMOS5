@@ -11,7 +11,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".view.DetalheContatoActivity"></activity>
         <activity android:name=".view.NovoContatoActivity"/>
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.NovoUsuarioActivity"/>
+        <activity android:name=".view.MainActivity"/>
+        <activity android:name=".view.MainActivityLogin">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

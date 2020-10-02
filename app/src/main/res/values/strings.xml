@@ -16,4 +16,27 @@
     <string name="actnovo_msg_save_sucess">Salvo com sucesso</string>
     <string name="erro_dados_vazio">Todos os dados são obrigatórios.</string>
     <string name="erro_contato">Contato inválido!</string>
+
+    <string name="usuario">Usuário</string>
+    <string name="hint_usuario">Digite seu e-mail</string>
+    <string name="senha">Senha</string>
+    <string name="hint_senha">Digite a senha</string>
+    <string name="logar">Logar</string>
+
+    <string name="key_usuario">USUARIO</string>
+    <string name="key_senha">SENHA</string>
+    <string name="key_lembrar">LEMBRAR</string>
+    <string name="key_usuarios_db">USERS</string>
+
+    <string name="file_preferences">loginlocal.preferencias</string>
+    <string name="file_usuario">loginlocal.usuarios</string>
+
+    <string name="user_default">thiagocavallari@outlook.com</string>
+    <string name="passwd_default">password</string>
+    <string name="erro_login_msg">Erro no login</string>
+    <string name="erro_entrada_msg">Informe usuário e senha.</string>
+    <string name="lembrar_login">Lembrar informações de login</string>
+    <string name="confirme_senha">Confirme a senha</string>
+    <string name="erro_confirma_senha">Senha e confirmação não conferem.</string>
+    <string name="erro_recupera_lista">Erro ao recuperar lista de usuários cadastrados.</string>
 </resources>
