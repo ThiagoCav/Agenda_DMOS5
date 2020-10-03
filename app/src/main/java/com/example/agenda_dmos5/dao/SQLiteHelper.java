@@ -6,10 +6,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import static com.example.agenda_dmos5.dao.BaseDao.addTable.COLUNA_EMAIL;
+import static com.example.agenda_dmos5.dao.BaseDao.addTable.NOME_TABELA;
+
 public class SQLiteHelper extends SQLiteOpenHelper {
 
-    public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "contato.db";
+    public static final int DATABASE_VERSION = 2;
+    public static final String DATABASE_NAME = "agenda.db";
 
     private Context context;
 
@@ -28,7 +31,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+        String sql;
+        switch (oldVersion){
+            case 1:
+                sql = "ALTER TABLE " + NOME_TABELA + " ADD COLUMN " + COLUNA_EMAIL + " TEXT";
+                sqLiteDatabase.execSQL(sql);
+        }
 
     }
 }

@@ -11,6 +11,8 @@ public class BaseDao {
         public static final String COLUNA_NOME = "nome";
         public static final String COLUNA_TELEFONE = "telefone_fixo";
         public static final String COLUNA_CELULAR = "telefone_celular";
+        public static final String COLUNA_EMAIL = "email";
+
     }
 
     public static final String CREATE_TABLE =
@@ -18,7 +20,8 @@ public class BaseDao {
                     + BaseColumns._ID + " INTEGER PRIMARY KEY,"
                     + addTable.COLUNA_NOME + " TEXT NOT NULL,"
                     + addTable.COLUNA_TELEFONE + " TEXT,"
-                    + addTable.COLUNA_CELULAR + " TEXT NOT NULL );";
+                    + addTable.COLUNA_CELULAR + " TEXT NOT NULL,"
+                    + addTable.COLUNA_EMAIL + " TEXT NOT NULL );";
 
     public static final String DELETE_TABLE =
             "DROP TABLE IF EXISTS " + addTable.NOME_TABELA;

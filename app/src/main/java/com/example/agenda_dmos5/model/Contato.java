@@ -7,18 +7,21 @@ public class Contato {
     private String nome;
     private String telefone;
     private String celular;
+    private String email;
 
-    public Contato(Integer id, String nome, String telefone, String celular) {
+    public Contato(String nome, String telefone, String celular, String email) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
+
     }
 
-    public Contato(String nome, String telefone, String celular) {
+    public Contato(int s,String nome, String telefone, String celular, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
+        this.email = email;
     }
 
     public Integer getId() {
@@ -53,9 +56,16 @@ public class Contato {
         this.celular = celular;
     }
 
+    public String getEmail() { return email; }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @NonNull
     @Override
     public String toString() {
         return getNome();
     }
+
 }

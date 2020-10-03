@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NovoUsuarioActivity">
+    tools:context=".view.NovoUsuarioActivity">
 
     <EditText
         android:id="@+id/edittext_novo_usuario"

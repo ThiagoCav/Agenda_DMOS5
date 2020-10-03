@@ -29,6 +29,7 @@ public class ContatoDao {
         values.put(BaseDao.addTable.COLUNA_NOME, contato.getNome());
         values.put(BaseDao.addTable.COLUNA_TELEFONE, contato.getTelefone());
         values.put(BaseDao.addTable.COLUNA_CELULAR, contato.getCelular());
+        values.put(BaseDao.addTable.COLUNA_EMAIL, contato.getEmail());
 
         db.insert(BaseDao.addTable.NOME_TABELA, null, values);
 
@@ -50,7 +51,8 @@ public class ContatoDao {
                 BaseColumns._ID,
                 BaseDao.addTable.COLUNA_NOME,
                 BaseDao.addTable.COLUNA_TELEFONE,
-                BaseDao.addTable.COLUNA_CELULAR
+                BaseDao.addTable.COLUNA_CELULAR,
+                BaseDao.addTable.COLUNA_EMAIL
         };
         String orderBy = BaseDao.addTable.COLUNA_NOME + " ASC";
         cursor = db.query(
@@ -68,7 +70,8 @@ public class ContatoDao {
                     cursor.getInt(0),
                     cursor.getString(1),
                     cursor.getString(2),
-                    cursor.getString(3)
+                    cursor.getString(3),
+                    cursor.getString(4)
             );
             contatos.add(contato);
         }

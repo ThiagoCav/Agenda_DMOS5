@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     protected static final String KEY_NOME = "nome";
     protected static final String KEY_TELEFONE = "telefone";
     protected static final String KEY_CELULAR = "celular";
+    protected static final String KEY_EMAIL = "email";
 
     protected static final int DETALHES_ITEM_CONTATO = 200;
     protected static final int REQUESTCODE_NOVO_CONTATO = 200;
@@ -60,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 args.putString(KEY_NOME, contatos.get(i).getNome());
                 args.putString(KEY_TELEFONE, contatos.get(i).getTelefone());
                 args.putString(KEY_CELULAR, contatos.get(i).getCelular());
+                args.putString(KEY_EMAIL, contatos.get(i).getEmail());
                 Intent intent = new Intent(getApplicationContext(), DetalheContatoActivity.class);
                 intent.putExtras(args);
                 startActivityForResult(intent, DETALHES_ITEM_CONTATO);

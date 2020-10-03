@@ -43,9 +43,9 @@
 
     <TextView
         android:id="@+id/textview_telefone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:textColor="#000000"
@@ -68,13 +68,37 @@
 
     <TextView
         android:id="@+id/textview_celular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="18dp"
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:textColor="#000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/textview_telefone"
         app:layout_constraintTop_toBottomOf="@+id/text_detalhe_telefone" />
+
+    <TextView
+        android:id="@+id/text_detalhe_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:paddingBottom="0dp"
+        android:text="EMAIL: "
+        android:textColor="#090908"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_celular" />
+
+    <TextView
+        android:id="@+id/textview_email"
+        android:layout_width="300dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/textview_telefone"
+        app:layout_constraintTop_toBottomOf="@+id/text_detalhe_celular" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

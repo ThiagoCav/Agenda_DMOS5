@@ -15,6 +15,7 @@ public class DetalheContatoActivity extends AppCompatActivity {
     private TextView nomeTextView;
     private TextView telefoneTextView;
     private TextView celularTextView;
+    private TextView emailTextView;
 
     private Contato contato;
 
@@ -26,6 +27,7 @@ public class DetalheContatoActivity extends AppCompatActivity {
         nomeTextView = findViewById(R.id.textview_nome);
         telefoneTextView = findViewById(R.id.textview_telefone);
         celularTextView = findViewById(R.id.textview_celular);
+        emailTextView = findViewById(R.id.textview_email);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -46,8 +48,9 @@ public class DetalheContatoActivity extends AppCompatActivity {
             String nome     = embrulho.getString(MainActivity.KEY_NOME);
             String telefone = embrulho.getString(MainActivity.KEY_TELEFONE);
             String celular  = embrulho.getString(MainActivity.KEY_CELULAR);
+            String email = embrulho.getString(MainActivity.KEY_EMAIL);
 
-            contato = new Contato(nome,telefone,celular);
+            contato = new Contato(nome,telefone,celular,email);
         }
     }
 
@@ -55,6 +58,7 @@ public class DetalheContatoActivity extends AppCompatActivity {
         nomeTextView.setText(contato.getNome());
         telefoneTextView.setText(contato.getTelefone());
         celularTextView.setText(contato.getCelular());
+        emailTextView.setText(contato.getEmail());
     }
 
     @Override

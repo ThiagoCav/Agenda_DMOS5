@@ -22,6 +22,7 @@ public class NovoContatoActivity extends AppCompatActivity {
     private EditText nomeEditText;
     private EditText telefoneEditText;
     private EditText celularEditText;
+    private EditText emailEditText;
     private Button salvarButton;
 
     private ContatoDao contatoDao;
@@ -35,6 +36,7 @@ public class NovoContatoActivity extends AppCompatActivity {
         nomeEditText = findViewById(R.id.edittext_nome);
         telefoneEditText = findViewById(R.id.edittext_telefone);
         celularEditText = findViewById(R.id.edittext_celular);
+        emailEditText = findViewById(R.id.edittext_email);
         salvarButton = findViewById(R.id.button_salvar_contato);
         salvarButton.setOnClickListener(this::salvarContato);
 
@@ -52,17 +54,18 @@ public class NovoContatoActivity extends AppCompatActivity {
     }
 
     private void salvarContato(View view){
-        String nome, telefone, celular;
+        String nome, telefone, celular, email;
         nome = nomeEditText.getText().toString();
         telefone = telefoneEditText.getText().toString();
         celular = celularEditText.getText().toString();
+        email = emailEditText.getText().toString();
 
         if(nome.isEmpty() || telefone.isEmpty() || celular.isEmpty()){
             showSnackbar(getString(R.string.erro_dados_vazio));
         }else{
             contatoDao = new ContatoDao(getApplicationContext());
             try {
-                contatoDao.add(new Contato(nome, telefone, celular));
+                contatoDao.add(new Contato(nome, telefone, celular, email));
                 finalizar(true);
             } catch (NullPointerException e){
                 showSnackbar(getString(R.string.erro_contato));
