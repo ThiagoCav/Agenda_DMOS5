@@ -19,9 +19,9 @@ public class BaseDao {
             "CREATE TABLE " + addTable.NOME_TABELA + "("
                     + BaseColumns._ID + " INTEGER PRIMARY KEY,"
                     + addTable.COLUNA_NOME + " TEXT NOT NULL,"
-                    + addTable.COLUNA_TELEFONE + " TEXT,"
+                    + addTable.COLUNA_TELEFONE + " TEXT NOT NULL,"
                     + addTable.COLUNA_CELULAR + " TEXT NOT NULL,"
-                    + addTable.COLUNA_EMAIL + " TEXT NOT NULL );";
+                    + addTable.COLUNA_EMAIL + " TEXT );";
 
     public static final String DELETE_TABLE =
             "DROP TABLE IF EXISTS " + addTable.NOME_TABELA;
