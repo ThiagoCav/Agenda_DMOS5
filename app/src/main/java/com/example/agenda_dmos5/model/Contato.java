@@ -9,15 +9,23 @@ public class Contato {
     private String celular;
     private String email;
 
-    public Contato(String nome, String telefone, String celular, String email) {
+    /*public Contato(String nome, String telefone, String celular, String email) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
 
-    }
+    }*/
 
     public Contato(int s,String nome, String telefone, String celular, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.telefone = telefone;
+        this.celular = celular;
+        this.email = email;
+    }
+
+    public Contato(String nome, String telefone, String celular, String email) {
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
@@ -56,16 +64,17 @@ public class Contato {
         this.celular = celular;
     }
 
-    public String getEmail() { return email; }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     @NonNull
     @Override
     public String toString() {
         return getNome();
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

@@ -60,7 +60,7 @@ public class NovoContatoActivity extends AppCompatActivity {
         celular = celularEditText.getText().toString();
         email = emailEditText.getText().toString();
 
-        if(nome.isEmpty() || telefone.isEmpty() || celular.isEmpty()){
+        if(nome.isEmpty() || telefone.isEmpty() || celular.isEmpty() || email.isEmpty()){
             showSnackbar(getString(R.string.erro_dados_vazio));
         }else{
             contatoDao = new ContatoDao(getApplicationContext());

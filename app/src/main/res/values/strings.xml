@@ -3,6 +3,7 @@
     <string name="nome">Nome do Contato</string>
     <string name="telefone">Telefone Fixo</string>
     <string name="celular">Telefone Celular</string>
+    <string name="email">Email</string>
     <string name="salvar">Salvar</string>
     <string name="tag">AGENDA</string>
     <string name="data_file">dados_contatos</string>
