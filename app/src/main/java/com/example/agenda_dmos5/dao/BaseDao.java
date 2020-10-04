@@ -25,4 +25,5 @@ public class BaseDao {
 
     public static final String DELETE_TABLE =
             "DROP TABLE IF EXISTS " + addTable.NOME_TABELA;
+
 }

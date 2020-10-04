@@ -2,6 +2,8 @@ package com.example.agenda_dmos5.view;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
 
         contatoArrayAdapter = new ItemContatoAdapter(this, contatos);
         contatosListView.setAdapter(contatoArrayAdapter);
+        registerForContextMenu(contatosListView);
 
         contatosListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

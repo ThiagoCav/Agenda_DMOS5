@@ -75,6 +75,8 @@ public class NovoContatoActivity extends AppCompatActivity {
         }
     }
 
+
+
     private void showSnackbar(String mensagem){
         Snackbar snackbar;
         ConstraintLayout constraintLayout = findViewById(R.id.layout_novo_contato);

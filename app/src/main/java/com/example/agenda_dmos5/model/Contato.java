@@ -9,14 +9,6 @@ public class Contato {
     private String celular;
     private String email;
 
-    /*public Contato(String nome, String telefone, String celular, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.telefone = telefone;
-        this.celular = celular;
-
-    }*/
-
     public Contato(int s,String nome, String telefone, String celular, String email) {
         this.id = id;
         this.nome = nome;

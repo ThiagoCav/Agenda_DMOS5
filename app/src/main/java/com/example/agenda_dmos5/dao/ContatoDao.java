@@ -3,6 +3,7 @@ package com.example.agenda_dmos5.dao;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.provider.BaseColumns;
 
@@ -34,6 +35,48 @@ public class ContatoDao {
         db.insert(BaseDao.addTable.NOME_TABELA, null, values);
 
         db.close();
+    }
+    public void alterarContato(Contato contato){
+
+        if (contato == null) throw new NullPointerException();
+
+        SQLiteHelper dbHelper = new SQLiteHelper(this.context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        ContentValues values = new ContentValues();
+        values.put(BaseDao.addTable.COLUNA_NOME, contato.getNome());
+        values.put(BaseDao.addTable.COLUNA_TELEFONE, contato.getTelefone());
+        values.put(BaseDao.addTable.COLUNA_CELULAR, contato.getCelular());
+        values.put(BaseDao.addTable.COLUNA_EMAIL, contato.getEmail());
+
+        String[]args = {contato.getId().toString()};
+
+        db.update(BaseDao.addTable.NOME_TABELA, values, "id=?",args);
+
+        db.close();
+    }
+
+    public String deletarContato(String nome){
+
+        SQLiteHelper dbHelper = new SQLiteHelper(this.context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        String sql = "DELETE FROM contato where nome = " + "'" + nome + "'";
+        try {
+            db.execSQL(sql);
+        }catch(SQLException e){
+            return String.valueOf(e);
+
+        }
+            return "Sucesso ao deletar";
+
+        /*SQLiteHelper dbHelper = new SQLiteHelper(this.context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        String [] args = {contato.getId().toString()};
+
+        //db.delete(BaseDao.addTable.NOME_TABELA, Contato, "id=?",args);
+        db.close();
+*/
     }
 
     public List<Contato> recuperateAll(){
